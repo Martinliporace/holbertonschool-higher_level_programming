@@ -10,7 +10,7 @@ if __name__ == "__main__":
     if cant == 1:
         print(cant - 1, "arguments.")
     elif cant == 2:
-        print(cant - 1, "argument:", args[1])
+        print(cant - 1, "argument:\n1: ", args[1])
 
     else:
         print(cant - 1, "arguments:")
