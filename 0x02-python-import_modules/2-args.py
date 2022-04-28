@@ -16,5 +16,5 @@ if __name__ == "__main__":
         print(cant - 1, "arguments:")
         cont = 1
         for i in range(1, cant):
-            print(cont, ":", args[i])
+            print(str(cont) + ":", args[i])
             cont += 1
