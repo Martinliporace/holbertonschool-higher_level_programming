@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
 
-    cpa = [0, 0]
-    cpb = [0, 0]
+    cpa = [0, 0, 0, 0]
+    cpb = [0, 0, 0, 0]
 
     for i in range(len(tuple_a)):
         cpa[i] = tuple_a[i]
