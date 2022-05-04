@@ -8,11 +8,11 @@ def roman_to_int(roman_string):
 
     aux.append(0)
 
-    res = aux[0]
-    for j in range(1, len(aux) - 1):
+    res = 0
+    for j in range(0, len(aux) - 1):
 
         if aux[j + 1] > aux[j]:
-            res -= aux[j]
+            res = res - aux[j]
         else:
             res += aux[j]
     return(res)
