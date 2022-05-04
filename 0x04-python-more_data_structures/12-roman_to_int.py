@@ -7,6 +7,8 @@ def roman_to_int(roman_string):
     for i in roman_string:
         if i in values:
             aux.append(values[i])
+        else:
+            return(0)
 
     aux.append(0)
 
