@@ -5,7 +5,7 @@ def roman_to_int(roman_string):
     aux = []
 
     for i in roman_string:
-        while i is in values:
+        if i in values:
             aux.append(values[i])
 
     aux.append(0)
