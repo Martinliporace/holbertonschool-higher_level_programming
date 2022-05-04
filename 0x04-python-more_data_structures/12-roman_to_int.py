@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
 
+    if roman_string == None or type(roman_string) is not str:
+        return(0)
     values = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
     aux = []
 
@@ -9,14 +11,14 @@ def roman_to_int(roman_string):
             aux.append(values[i])
 
     aux.append(0)
-
+    validos = [1, 10, 100]
     res = 0
     for j in range(0, len(aux) - 1):
 
-        if aux[j + 1] > aux[j] and (aux[j] == 1 or aux[j] == 10 or aux[j] == 100):
+        if aux[j + 1] > aux[j] and aux[j] in validos:
             res = res - aux[j]
-        
-        elif aux[j + 1] > aux[j] and (aux[j] != 1 or aux[j] != 10 or aux[j] != 100):
+    
+        elif aux[j + 1] > aux[j] and aux[j] not in validos:
             return(0)
         else:
             res += aux[j]
