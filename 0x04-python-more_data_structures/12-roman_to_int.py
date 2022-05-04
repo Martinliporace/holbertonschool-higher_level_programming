@@ -16,7 +16,9 @@ def roman_to_int(roman_string):
     for j in range(0, len(aux) - 1):
 
         if aux[j + 1] > aux[j]:
-            res = res - aux[j]
+            res -= aux[j]
+
         else:
             res += aux[j]
+            
     return(res)
