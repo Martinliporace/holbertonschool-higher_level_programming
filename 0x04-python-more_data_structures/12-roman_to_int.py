@@ -13,8 +13,11 @@ def roman_to_int(roman_string):
     res = 0
     for j in range(0, len(aux) - 1):
 
-        if aux[j + 1] > aux[j]:
+        if aux[j + 1] > aux[j] and (aux[j] == 1 or aux[j] == 10 or aux[j] == 100):
             res = res - aux[j]
+        
+        elif aux[j + 1] > aux[j] and (aux[j] != 1 or aux[j] != 10 or aux[j] != 100):
+            return(0)
         else:
             res += aux[j]
     return(res)
