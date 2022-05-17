@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-"""Private instance attribute: size"""
+"""empty class Square"""
 
 
 class Square:
-
+    """defines a square"""
     def __init__(self, size):
         """Private instance attribute: size"""
         self.__size = size
