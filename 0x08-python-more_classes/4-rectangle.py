@@ -9,8 +9,8 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """rectangle instance"""
 
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def height(self):
@@ -80,4 +80,4 @@ class Rectangle:
     def __repr__(self):
         """Returns a string representation of the rectangle"""
 
-        return ("Rectangle ({:d}, {:d})".format(self.width, self.height))
+        return ("Rectangle ({:d}, {:d})".format(self.__width, self.__height))
