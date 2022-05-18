@@ -9,8 +9,8 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """rectangle instance"""
 
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def height(self):
