@@ -82,7 +82,7 @@ class Square:
 
         for i in range(0, self.size):
             for x in range(self.position[0]):
-                out += ''
+                out += ' '
             for j in range(self.size):
                 out += '#'
 
