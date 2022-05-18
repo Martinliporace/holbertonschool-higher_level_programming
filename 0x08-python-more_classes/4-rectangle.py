@@ -67,13 +67,13 @@ class Rectangle:
 
         out = ''
 
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return out
 
-        for i in range(self.height - 1):
-            out += ('#' * self.width) + '\n'
-            if i + 2 == self.height:
-                out += ('#' * self.width)
+        for i in range(self.__height - 1):
+            out += ('#' * self.__width) + '\n'
+            if i + 2 == self.__height:
+                out += ('#' * self.__width)
 
         return out
 
