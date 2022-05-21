@@ -1,0 +1,102 @@
+ ____        _   _                 
+|  _ \ _   _| |_| |__   ___  _ __  
+| |_) | | | | __| '_ \ / _ \| '_ \ 
+|  __/| |_| | |_| | | | (_) | | | |
+|_|    \__, |\__|_| |_|\___/|_| |_|
+       |___/                       
+ _____         _            _      _                 
+|_   _|__  ___| |_       __| |_ __(_)_   _____ _ __  
+  | |/ _ \/ __| __|____ / _` | '__| \ \ / / _ \ '_ \ 
+  | |  __/\__ \ ||_____| (_| | |  | |\ V /  __/ | | |
+  |_|\___||___/\__|     \__,_|_|  |_| \_/ \___|_| |_|
+                                                     
+     _                _                                  _   
+  __| | _____   _____| | ___  _ __  _ __ ___   ___ _ __ | |_ 
+ / _` |/ _ \ \ / / _ \ |/ _ \| '_ \| '_ ` _ \ / _ \ '_ \| __|
+| (_| |  __/\ V /  __/ | (_) | |_) | | | | | |  __/ | | | |_ 
+ \__,_|\___| \_/ \___|_|\___/| .__/|_| |_| |_|\___|_| |_|\__|
+                             |_|                             
+
+
+
+
+
+>>> add_integer = __import__("0-add_integer").add_integer
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ ____                             ____                    
+/ ___| _   _  ___ ___ ___  ___   / ___|__ _ ___  ___  ___ 
+\___ \| | | |/ __/ __/ _ \/ __| | |   / _` / __|/ _ \/ __|
+ ___) | |_| | (_| (_|  __/\__ \ | |__| (_| \__ \  __/\__ \
+|____/ \__,_|\___\___\___||___/  \____\__,_|___/\___||___/
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+>>> add_integer(8, 7)
+15
+
+>>> add_integer(10)
+108
+
+>>> add_integer(7.6, 3.9)
+10
+
+>>> add_integer(0, 3)
+3
+
+>>> add_integer(3, 0)
+3
+
+>>> add_integer(0)
+98
+
+>>> add_integer(-10, 11)
+1
+
+>>> add_integer(-2, -3)
+-5
+
+>>> add_integer((1.5), 2)
+3
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ _____     _ _          _    ____                    
+|  ___|_ _(_) | ___  __| |  / ___|__ _ ___  ___  ___ 
+| |_ / _` | | |/ _ \/ _` | | |   / _` / __|/ _ \/ __|
+|  _| (_| | | |  __/ (_| | | |__| (_| \__ \  __/\__ \
+|_|  \__,_|_|_|\___|\__,_|  \____\__,_|___/\___||___/
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+>>> add_integer("Friday", 13)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(4, "Yara!")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(4, 8, -1)
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer("6", 5)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer((1,5) , 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
