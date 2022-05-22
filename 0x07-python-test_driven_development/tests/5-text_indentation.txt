@@ -12,8 +12,8 @@
    | | ____|___ | | |_            ( (_| | |   | |\ V /| ____| | | |
    |_|_____|___/   \__)            \____|_|   |_| \_/ |_____)_| |_|
                                                                    
-
->>> print_square = __import__("4-print_square").print_square
+                                                                                   
+>>> text_indentation = __import__("5-text_indentation").text_indentation
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=-
   ______                                                            
@@ -25,17 +25,37 @@
                                                                     
                                                                                              
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=-
->>> print_square(4)
-####
-####
-####
-####
 
->>> print_square(0)
-<BLANKLINE> 
+>>> text_indentation('ola khe ase')
+ola khe ase
 
->>> print_square(1)
-#
+>>> text_indentation('Ola. Khe: Ase? Coso')
+Ola.
+<BLANKLINE>
+Khe:
+<BLANKLINE>
+Ase?
+<BLANKLINE>
+Coso
+
+>>> text_indentation('Ola. Khe: Ase? Coso.')
+Ola.
+<BLANKLINE>
+Khe:
+<BLANKLINE>
+Ase?
+<BLANKLINE>
+Coso.
+
+>>> text_indentation('Ola. Khe: Ase? Coso. ')
+Ola.
+<BLANKLINE>
+Khe:
+<BLANKLINE>
+Ase?
+<BLANKLINE>
+Coso.
+<BLANKLINE>
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=--=-=-=--=-=-=--=-=-=-
  _______     _ _            _                                
@@ -48,20 +68,26 @@
                                                                                        
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=--=-=-=--=-=-=--=-=-=-
 
-
-
->>> print_square(-1)
+>>> text_indentation(458416)
 Traceback (most recent call last):
 ...
-ValueError: size must be >= 0
+TypeError: text must be a string
 
->>> print_square('a')
+>>> text_indentation(True)
 Traceback (most recent call last):
 ...
-TypeError: size must be an integer
+TypeError: text must be a string
 
->>> print_square(1, 2)
+>>> text_indentation(ola)
 Traceback (most recent call last):
 ...
-TypeError: print_square() takes 1 positional argument but 2 were given
+NameError: name 'ola' is not defined
+
+>>> text_indentation('ola', 'khe')
+Traceback (most recent call last):
+...
+TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+
+
 
