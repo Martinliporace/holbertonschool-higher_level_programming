@@ -1,0 +1,116 @@
+ ______             _                                              
+(_____ \        _  | |                                             
+ _____) )   _ _| |_| |__   ___  ____                               
+|  ____/ | | (_   _)  _ \ / _ \|  _ \                              
+| |    | |_| | | |_| | | | |_| | | | |                             
+|_|     \__  |  \__)_| |_|\___/|_| |_|                             
+       (____/                                                      
+ _______                               _       _                   
+(_______)          _                  | |     (_)                  
+    _ _____  ___ _| |_    _____     __| | ____ _ _   _ _____ ____  
+   | | ___ |/___|_   _)  (_____)   / _  |/ ___) | | | | ___ |  _ \ 
+   | | ____|___ | | |_            ( (_| | |   | |\ V /| ____| | | |
+   |_|_____|___/   \__)            \____|_|   |_| \_/ |_____)_| |_|
+                                                                   
+
+>>> matrix_mul = __import__("100-matrix_mul").matrix_mul
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=-
+  ______                                                            
+ / _____)                                                           
+( (____  _   _  ____ ____ _____  ___     ____ _____  ___ _____  ___ 
+ \____ \| | | |/ ___) ___) ___ |/___)   / ___|____ |/___) ___ |/___)
+ _____) ) |_| ( (__( (___| ____|___ |  ( (___/ ___ |___ | ____|___ |
+(______/|____/ \____)____)_____|___/    \____)_____(___/|_____|___/ 
+                                                                    
+                                                                                             
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-=-
+
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+>>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+[[13, 16]]
+
+>>> matrix_mul([[1, -2], [-3, 4]], [[1, 2], [3, -4]])
+[[-5, 10], [9, -22]]
+
+>>> matrix_mul([[-1, 2.5]],[[5, -3],[-4.2, 11]])
+[[-15.5, 30.5]]
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=--=-=-=--=-=-=--=-=-=-
+ _______     _ _            _                                
+(_______)   (_) |          | |                               
+ _____ _____ _| | _____  __| |    ____ _____  ___ _____  ___ 
+|  ___|____ | | || ___ |/ _  |   / ___|____ |/___) ___ |/___)
+| |   / ___ | | || ____( (_| |  ( (___/ ___ |___ | ____|___ |
+|_|   \_____|_|\_)_____)\____|   \____)_____(___/|_____|___/ 
+                                                             
+                                                                                       
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=--=-=-=--=-=-=--=-=-=-
+
+>>> matrix_mul([[1, 2]], [[3, 4], [5, "H"]])
+Traceback (most recent call last):
+...
+TypeError: m_b should contain only integers or floats
+
+>>> matrix_mul([[1, "H"]], [[3, 4], [5, 6]])
+Traceback (most recent call last):
+...
+TypeError: m_a should contain only integers or floats
+
+>>> matrix_mul([[1, 2]],[[1, 2, 3],[1, 2]])
+Traceback (most recent call last):
+...
+TypeError: each row of m_b must be of the same size
+
+>>> matrix_mul([[]],[[1, 2]])
+Traceback (most recent call last):
+...
+ValueError: m_a can't be empty
+
+>>> matrix_mul([[1, 2]],[[]])
+Traceback (most recent call last):
+...
+ValueError: m_b can't be empty
+
+>>> matrix_mul([[1, 2, 3]],[[1, 2]])
+Traceback (most recent call last):
+...
+ValueError: m_a and m_b can't be multiplied
+
+>>> matrix_mul([[1, 2]],[[1, 2, 3]])
+Traceback (most recent call last):
+...
+ValueError: m_a and m_b can't be multiplied
+
+>>> matrix_mul([[True]],[[1, 2, 3]])
+Traceback (most recent call last):
+...
+TypeError: m_a should contain only integers or floats
+
+>>> matrix_mul([[1, 2]],[[False]])
+Traceback (most recent call last):
+...
+TypeError: m_b should contain only integers or floats
+
+>>> matrix_mul([[(1, 2)]],[[-4.2, 11]])
+Traceback (most recent call last):
+...
+TypeError: m_a should contain only integers or floats
+
+>>> matrix_mul([[1, 2]],[[{1:2}]])
+Traceback (most recent call last):
+...
+TypeError: m_b should contain only integers or floats
+
+>>> matrix_mul([[1, 2]],[[3j, 5]])
+Traceback (most recent call last):
+...
+TypeError: m_b should contain only integers or floats
+
+
+
+
+
