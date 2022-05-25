@@ -19,25 +19,5 @@ class TestMaxInteger(unittest.TestCase):
     def test_NegativeNumbers(self):
         self.assertEqual(max_integer([-8, -2, -9, -120]), -2)
 
-    """test for one +number"""
-    def test_OnePNumber(self):
-        self.assertEqual(max_integer([8]), 8)
-
-    """test for one -number"""
-    def test_OneNNumber(self):
-        self.assertEqual(max_integer([-9]), -9)
-
-    """test for empty list"""
-    def test_EmptyList(self):
-        self.assertEqual(max_integer([]), None)
-
-    """test for same values"""
-    def test_SameValues(self):
-        self.assertEqual(max_integer([8, 8, 8, 8]), 8)
-
-    """test for same and different values"""
-    def test_SameAndDifferentVal(self):
-        self.assertEqual(max_integer([8, 120, 9, 120]), 120)
-
-if __name__ == '__main__':
+        if __name__ == '__main__':
     unittest.main()
