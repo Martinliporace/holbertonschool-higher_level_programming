@@ -18,10 +18,6 @@ class TestMaxInteger(unittest.TestCase):
     """test for negative numbers"""
     def test_NegativeNumbers(self):
         self.assertEqual(max_integer([-8, -2, -9, -120]), -2)
-    """test for one +number"""
-    
-    def test_OnePNumber(self):
-        self.assertEqual(max_integer([8]), 8)
 
     """test for one -number"""
     def test_OneNNumber(self):
