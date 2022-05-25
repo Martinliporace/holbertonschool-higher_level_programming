@@ -39,11 +39,5 @@ class TestMaxInteger(unittest.TestCase):
     def test_SameAndDifferentVal(self):
         self.assertEqual(max_integer([8, 120, 9, 120]), 120)
 
-    """test for float values"""
-    def test_Float(self):
-        with self.assertRaises(TypeError):
-            max_integer([3.5, 8.3])
-
-
 if __name__ == '__main__':
     unittest.main()
