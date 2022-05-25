@@ -27,7 +27,9 @@ class TestMaxInteger(unittest.TestCase):
     def test_OneNNumber(self):
         self.assertEqual(max_integer([-9]), -9)
 
-
+    """test for empty list"""
+    def test_EmptyList(self):
+        self.assertEqual(max_integer([]), None)
 
     """test for same values"""
     def test_SameValues(self):
