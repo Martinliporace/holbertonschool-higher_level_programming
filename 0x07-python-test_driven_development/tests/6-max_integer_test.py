@@ -35,6 +35,14 @@ class TestMaxInteger(unittest.TestCase):
     def test_SameValues(self):
         self.assertEqual(max_integer([8, 8, 10, 8, 8]), 10)
 
+    """test for end max"""
+    def test_SameValues(self):
+        self.assertEqual(max_integer([8, 8, 8, 10]), 10)
+
+    """test for beggin max"""
+    def test_SameValues(self):
+        self.assertEqual(max_integer([10, 8, 8, 8]), 10)
+
     """test for same and different values"""
     def test_SameAndDifferentVal(self):
         self.assertEqual(max_integer([8, 120, 9, 120]), 120)
