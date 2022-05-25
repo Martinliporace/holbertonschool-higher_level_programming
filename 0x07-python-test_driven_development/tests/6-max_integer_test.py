@@ -38,5 +38,6 @@ class TestMaxInteger(unittest.TestCase):
     """test for same and different values"""
     def test_SameAndDifferentVal(self):
         self.assertEqual(max_integer([8, 120, 9, 120]), 120)
-        if __name__ == '__main__':
+
+if __name__ == '__main__':
     unittest.main()
