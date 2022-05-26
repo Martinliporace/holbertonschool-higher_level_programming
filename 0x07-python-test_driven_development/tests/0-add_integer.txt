@@ -86,6 +86,22 @@ Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+>>> add_integer(None, 80)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(float('inf'), 98)
+Traceback (most recent call last):
+...
+89
+
+>>> add_integer(-float('inf'), 98)
+Traceback (most recent call last):
+...
+89
+
+
 >>> add_integer("6", 5)
 Traceback (most recent call last):
 ...
