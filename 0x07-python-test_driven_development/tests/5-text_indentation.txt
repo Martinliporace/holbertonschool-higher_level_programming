@@ -46,6 +46,7 @@ Khe:
 Ase?
 <BLANKLINE>
 Coso.
+<BLANKLINE>
 
 >>> text_indentation('Ola. Khe: Ase? Coso. ')
 Ola.
