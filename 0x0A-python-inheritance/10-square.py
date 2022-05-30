@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Square"""
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Square(BaseGeometry):
+class Square(Rectangle):
     """class"""
     def __init__(self, size):
         """init"""
@@ -12,7 +12,7 @@ class Square(BaseGeometry):
 
     def area(self):
         """area"""
-        return(self.__size * self.__size)
+        return(self.__size ** 2)
 
     def __str__(self):
         """str"""
