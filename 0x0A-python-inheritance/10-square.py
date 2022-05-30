@@ -7,6 +7,7 @@ class Square(BaseGeometry):
     """class"""
     def __init__(self, size):
         """init"""
+        self.integer_validator("size", size)
         self.__size = size
 
     def area(self):
