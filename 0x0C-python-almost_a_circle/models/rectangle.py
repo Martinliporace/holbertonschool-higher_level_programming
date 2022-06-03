@@ -1,0 +1,86 @@
+#!/usr/bin/python3
+"""First Rectangle"""
+from models.base import Base
+
+
+class Rectangle(Base):
+    """class rectangle"""
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """constructor"""
+
+        self.integer_validator("width", width)
+        self.__width = width
+        self.integer_validator("height", height)
+        self.__height = height
+        self.xy_validator("x", x)
+        self.__x = x
+        self.xy_validator("y", y)
+        self.__y = y
+        super().__init__(id)
+
+    @property
+    def width(self):
+        """retrieves width"""
+        return(self.__width)
+
+    @width.setter
+    def width(self, value):
+        """sets width"""
+        self.integer_validator("width", value)
+        self.__width = value
+
+    @property
+    def height(self):
+        """retrieves height"""
+        return(self.__height)
+
+    @height.setter
+    def height(self, value):
+        """sets height"""
+        self.integer_validator("height", value)
+        self.__height = value
+
+    @property
+    def x(self, value):
+        """retrieves x"""
+        return(self.__x)
+
+    @x.setter
+    def x(self, value):
+        """sets x"""
+        self.xy_validator("x", value)
+        self.__x = value
+
+    @property
+    def y(self, value):
+        """retrieves y"""
+        return(self.__y)
+
+    @y.setter
+    def y(self, value):
+        """sets y"""
+        self.xy_validator("y", value)
+        self.__y = value
+
+    def area(self):
+        """area"""
+        return (self.__width * self.__height)
+
+    def display(self):
+        """print the rectangle with the character #"""
+
+        for z in range(self.__y):
+            print('')
+        for x in range(self.__height):
+            for y in range(self.__x):
+                print(" ", end='')
+            for i in range(self.__width):
+                print('#', end='')
+            print('')
+
+    def __str__(self):
+        return("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.__x, self.__y,
+                                                       self.__width,
+                                                       self.__height))
