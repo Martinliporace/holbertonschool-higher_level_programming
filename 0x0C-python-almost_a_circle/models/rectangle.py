@@ -85,7 +85,7 @@ class Rectangle(Base):
                                                        self.__width,
                                                        self.__height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns an argument to each attribute."""
 
         if args and len(args) > 0:
@@ -102,3 +102,31 @@ class Rectangle(Base):
             if len(args) > 4:
                 self.xy_validator("y", args[4])
                 self.__y = args[4]
+
+        else:
+            if kwargs is not None:
+                for key, value in kwargs.items():
+                    if key == 'width':
+                        self.integer_validator('width', value)
+                    if key == 'height':
+                        self.integer_validator('height', value)
+                    if key == 'x':
+                        self.xy_validator('x', value)
+                    if key == 'y':
+                        self.xy_validator('y', value)
+                    setattr(self, key, value)
+
+    def integer_validator(self, name, value):
+        """integer validator"""
+        if type(value) is not int:
+            raise TypeError('{} must be an integer'.format(name))
+        if value <= 0:
+            raise ValueError('{} must be > 0'.format(name))
+
+    def xy_validator(self, name, value):
+        """xy validator"""
+        if type(value) is not int:
+            raise TypeError('{} must be an integer'.format(name))
+        if value < 0:
+            raise ValueError('{} must be >= 0'.format(name))
+

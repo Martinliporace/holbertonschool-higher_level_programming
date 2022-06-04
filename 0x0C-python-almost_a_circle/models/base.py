@@ -17,17 +17,4 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-    def integer_validator(self, name, value):
-        """integer validator"""
-        if type(value) is not int:
-            raise TypeError('{} must be an integer'.format(name))
-        if value <= 0:
-            raise ValueError('{} must be > 0'.format(name))
-
-    def xy_validator(self, name, value):
-        """xy validator"""
-        if type(value) is not int:
-            raise TypeError('{} must be an integer'.format(name))
-        if value < 0:
-            raise ValueError('{} must be >= 0'.format(name))
-
+    
