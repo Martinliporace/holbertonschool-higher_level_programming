@@ -15,11 +15,11 @@ class Square(Rectangle):
         return self.width
 
     @size.setter
-    def size(self, value):
+    def size(self, size):
         """ size setter """
 
-        self.integer_validator("width", value)
-        self.width = value
+        self.height = size
+        self.width = size
 
     def __str__(self):
         return ("[Square] ({}) {}/{} - {}"
