@@ -131,6 +131,6 @@ class Rectangle(Base):
             raise ValueError('{} must be >= 0'.format(name))
 
     def to_dictionary(self):
-        dic = {'id':self.id, 'width':self.width, 'height':self.height,
-               'x':self.x, 'y':self.y}
+        dic = {'id': self.id, 'width': self.width, 'height': self.height,
+               'x': self.x, 'y': self.y}
         return(dic)

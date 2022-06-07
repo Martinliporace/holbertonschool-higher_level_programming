@@ -2,6 +2,7 @@
 """Base class"""
 import json
 
+
 class Base:
     """This class will be the "base" of all other classes in this project.
     The goal of it is to manage id attribute in all your future classes and
@@ -22,7 +23,7 @@ class Base:
         """returns the JSON string representation of list_dictionaries"""
 
         if list_dictionaries is None or len(list_dictionaries) == 0:
-                return "[]"
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -46,3 +47,28 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ returns an instance with all attributes already set """
+
+        if cls.__name__ == "Square":
+            dummy = cls(17)
+        elif cls.__name__ == "Rectangle":
+            dummy = cls(17, 17)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances """
+
+        j_list = []
+        filename = "{}.json".format(cls.__name__)
+        try:
+            with open(filename) as f:
+                for objs in cls.from_json_string(f.read()):
+                    j_list.append(cls.create(**objs))
+                return j_list
+        except Exception:
+            return j_list
