@@ -12,6 +12,11 @@ class Test_base(unittest.TestCase):
         b1 = Base(89)
         self.assertEqual(b1.id, 89)
 
+    def test_id_not_None(self):
+        b1 = Base(90)
+        self.assertEqual(b1.id, 90)
+
+
     def test_id_None(self):
         b2 = Base()
         self.assertEqual(b2.id, 1)
