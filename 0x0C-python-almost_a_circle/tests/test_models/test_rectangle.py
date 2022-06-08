@@ -7,7 +7,6 @@ from models.rectangle import Rectangle
 
 class Test_rectangle(unittest.TestCase):
 
-
     """test width int"""
     def test_width_is_int(self):
         r1 = Rectangle(10, 2)

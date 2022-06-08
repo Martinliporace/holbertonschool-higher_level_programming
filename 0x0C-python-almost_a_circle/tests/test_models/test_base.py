@@ -2,7 +2,6 @@
 """Unittest for base"""
 
 import unittest
-import pep8
 from models.base import Base
 
 
