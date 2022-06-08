@@ -74,7 +74,7 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """area"""
+        """area value of the Rectangle"""
         return (self.__width * self.__height)
 
     def display(self):
@@ -90,7 +90,7 @@ class Rectangle(Base):
             print('')
 
     def __str__(self):
-        """str"""
+        """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.__x, self.__y,
                                                        self.__width,
@@ -142,7 +142,7 @@ class Rectangle(Base):
             raise ValueError('{} must be >= 0'.format(name))
 
     def to_dictionary(self):
-        """to dict"""
+        """ returns the dictionary representation of a Rectangle"""
         dic = {'id': self.id, 'width': self.width, 'height': self.height,
                'x': self.x, 'y': self.y}
         return(dic)
