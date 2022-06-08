@@ -18,5 +18,11 @@ class Test_rectangle(unittest.TestCase):
         self.assertEqual(r1.height, 2)
 
 
+    """test id"""
+    def test_id(self):
+        r1 = Rectangle(10, 2, 0, 0, 12)
+        self.assertEqual(r1.id, 12)
+
+
 if __name__ == '__main__':
     unittest.main()
