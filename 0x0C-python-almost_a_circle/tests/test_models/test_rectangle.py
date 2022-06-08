@@ -23,6 +23,16 @@ class Test_rectangle(unittest.TestCase):
         r1 = Rectangle(10, 2, 0, 0, 12)
         self.assertEqual(r1.id, 12)
 
+    """test x"""
+    def test_x(self):
+        r1 = Rectangle(10, 2, 1, 0, 12)
+        self.assertEqual(r1.x, 1)
+
+    """test y"""
+    def test_y(self):
+        r1 = Rectangle(10, 2, 1, 8, 12)
+        self.assertEqual(r1.y, 8)
+
 
 if __name__ == '__main__':
     unittest.main()
