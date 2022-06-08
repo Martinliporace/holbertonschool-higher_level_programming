@@ -16,22 +16,5 @@ class Test_base(unittest.TestCase):
         b2 = Base()
         self.assertEqual(b2.id, 1)
 
-    def test_type_error_str(self):
-        b2 = Base("Holberton")
-        self.assertRaises(TypeError)
-
-    def test_type_error_float(self):
-        b2 = Base(3.5)
-        self.assertRaises(TypeError)
-
-    def test_type_error_empty_list(self):
-        b2 = Base([])
-        self.assertRaises(TypeError)
-
-    def test_type_error_list(self):
-        b2 = Base([1, 2, 68])
-        self.assertRaises(TypeError)
-
-
 if __name__ == '__main__':
     unittest.main()
