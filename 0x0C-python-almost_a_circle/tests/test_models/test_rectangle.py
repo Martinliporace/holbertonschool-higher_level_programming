@@ -13,7 +13,7 @@ class Test_rectangle(unittest.TestCase):
         self.assertEqual(r1.width, 10)
 
     """test height int"""
-    def test_width_is_int(self):
+    def test_height_is_int(self):
         r1 = Rectangle(10, 2)
         self.assertEqual(r1.height, 2)
 
