@@ -1,18 +1,20 @@
 #!/usr/bin/python3
-"""square"""
+"""first square"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """class square"""
+    """class Square that inherits from Rectangle"""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """constructor"""
+        """all the super class with id, x, y, width and height - this super
+        call will use the logic of the __init__ of the Rectangle class. The
+        width and height must be assigned to the value of size"""
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """ size setter """
+        """ size geter """
         return self.width
 
     @size.setter
@@ -23,6 +25,8 @@ class Square(Rectangle):
         self.height = size
 
     def __str__(self):
+        """returns [Square] (<id>) <x>/<y> - <size>"""
+
         return ("[Square] ({}) {}/{} - {}"
                 .format(self.id, self.x, self.y,
                         self.size))
@@ -56,6 +60,7 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """returns the dictionary representation of a square"""
         dic = {'id': self.id, 'size': self.size,
                'x': self.x, 'y': self.y}
         return(dic)
