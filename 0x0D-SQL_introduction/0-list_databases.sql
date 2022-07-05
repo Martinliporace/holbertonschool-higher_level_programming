@@ -1,2 +1,2 @@
 -- Task 0 List databases
-mysql>SHOW DATABASES
+mysql>SHOW DATABASES;
