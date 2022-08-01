@@ -1,6 +1,8 @@
 #!/usr/bin/node
 const arg = process.argv[2];
 const toPrint = parseInt(arg);
-if (toPrint === null) {
+if (isNaN(toPrint)) {
   console.log('Not a number');
-} console.log(toPrint);
+} else {
+console.log(toPrint);
+}
