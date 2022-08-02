@@ -5,7 +5,7 @@ let j = 2;
 let mayor = parseInt(process.argv[i]);
 let segundo = parseInt(process.argv[j]);
 
-if (isNaN(process.argv[2]) || isNaN(process.argv[3])) {
+if (len <= 3) {
   console.log(0);
 } else {
   while (i < len) {
