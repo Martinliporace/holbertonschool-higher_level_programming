@@ -10,7 +10,8 @@ if (__name__ == "__main__"):
                           passwd=argv[2], db=argv[3], port=3306)
 
     cur = con.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id
+                ORDER BY ASC")
     query = cur.fetchall()
 
     for x in query:
