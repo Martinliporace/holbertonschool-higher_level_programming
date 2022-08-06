@@ -11,8 +11,7 @@ if (__name__ == "__main__"):
 
     input = argv[4]
     cur = con.cursor()
-    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id"
-                .format(input))
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC".format(input))
     query = cur.fetchall()
 
     for x in query:
