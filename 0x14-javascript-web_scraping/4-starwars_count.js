@@ -18,6 +18,6 @@ axios.get(url)
     }
     console.log(cont);
   })
-.catch(function (error) {
+  .catch(function (error) {
     console.log(`code: ${error.response.status}`);
   });
