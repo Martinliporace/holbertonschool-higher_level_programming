@@ -17,9 +17,4 @@ axios.get(url)
       }
     }
     console.log(cont);
-  })
-  .catch(function (error) {
-    if (error.datos) {
-      console.log('code: ' + error.datos.status);
-    }
   });
