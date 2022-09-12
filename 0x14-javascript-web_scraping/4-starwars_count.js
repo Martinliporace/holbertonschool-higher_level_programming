@@ -13,7 +13,6 @@ axios.get(url)
       for (let j = 0; j < cant; j++) {
         if (chars.characters[j].includes('18')) {
           cont++;
-          break;
         }
       }
     }
