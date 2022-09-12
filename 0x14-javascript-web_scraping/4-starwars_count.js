@@ -11,7 +11,7 @@ axios.get(url)
       const chars = datos.data.results[i];
       const cant = chars.characters.length;
       for (let j = 0; j < cant; j++) {
-        if (chars.characters[j].includes('18')) {
+        if (chars.characters[j].includes('/18/')) {
           cont++;
         }
       }
