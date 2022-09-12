@@ -5,7 +5,7 @@ const url = process.argv[2];
 let cont = 0;
 let total = 0;
 axios.get(url)
-  .then(datos => {
+  .then(function(datos){
     total = datos.data.count;
     for (let i = 0; i < total; i++) {
       const chars = datos.data.results[i];
