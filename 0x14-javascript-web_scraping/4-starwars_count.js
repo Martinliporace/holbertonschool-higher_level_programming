@@ -17,10 +17,9 @@ axios.get(url)
       }
     }
     console.log(cont);
-})
+  })
   .catch(function (error) {
-    if (error.response) {
-      console.log('code: ' + error.response.status);
+    if (error.datos) {
+      console.log('code: ' + error.datos.status);
     }
-
   });
