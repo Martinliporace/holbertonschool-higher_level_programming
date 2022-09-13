@@ -6,7 +6,7 @@ let cont = 0;
 let total = 0;
 axios.get(url)
   .then(function (datos) {
-    total = datos.data.count;
+    total = datos.data.results.length;
     for (let i = 0; i < total; i++) {
       const chars = datos.data.results[i];
       const cant = chars.characters.length;
